@@ -1,0 +1,24 @@
+.Button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding:10px 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  font-family: 'Y_Spotlight';
+}
+
+.Button_default {
+  background-color: #AAAAAA;
+  color: white;
+}
+
+.Button_positive {
+  background-color: #A4EBF3;
+  color: white;
+}
+
+.Button_negative {
+  background-color: #44679F;
+  color: white;
+}

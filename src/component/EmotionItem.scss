@@ -1,0 +1,36 @@
+.EmotionItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  img {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  span {
+    text-align: center;
+    font-size: 18px;
+  }
+  &_off {
+    background: #ececec;
+  }
+  &_on {
+    background: #BFEAF5;
+    color: white;
+  }
+}
+
+
+/* [className^="EmotionItem_on_"] {
+  background: #BFEAF5;
+  color: white;
+} */
+
+
+/* .EmotionItem_on_1 {
+  background: #A4EBF3;
+  color: white;
+} */

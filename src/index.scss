@@ -1,0 +1,44 @@
+/* 제목폰트 */
+@font-face {
+  font-family: 'YOnepickTTF-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/YOnepickTTF-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+/* 일기내용 폰트 */
+@font-face {
+  font-family: 'Ownglyph_kimkonghae';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_kimkonghae.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 버튼 폰트 */
+@font-face {
+  font-family: 'Y_Spotlight';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  width: 100%;
+  background-color: #f6f6f6;
+  font-family: 'Ownglyph_kimkonghae';
+}
+
+body {
+  height: 100%;
+  #root {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: white;
+    box-shadow: rgba(100,100,100,0.2) 0px 7px 29px 0px;
+  }
+}

@@ -1,0 +1,36 @@
+.DiaryItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e2e2;
+  .img_section {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    min-width: 120px;
+    height: 80px;
+    padding: 5px 0;
+    border-radius: 5px;
+    background: #BFEAF5;
+    
+    &:hover {
+      background: #ececec;
+    }
+  }
+  .info_section {
+    cursor: pointer;
+    flex-grow: 1;
+    margin-left: 20px;
+    .date_wrapper {
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .content_wrapper {
+      font-size: 18px;
+    }
+  }
+  .button_section {
+    min-width: 70px;
+  }
+}
