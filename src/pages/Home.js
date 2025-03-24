@@ -20,7 +20,7 @@ const Home = () => {
   };
   // pivotDate의 값을 한달 전으로 업데이트하는 함수
   const onDecreaseMonth = () => {
-    setPivotDate(new Date(pivotDate.getDayetFullYear(), pivotDate.getMonth()-1));
+    setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth()-1));
   };
 
   // pivotDate가 변할 때마다 해당 월의 일기데이터 필터링
