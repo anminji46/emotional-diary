@@ -15,7 +15,7 @@ const useDiary = (id) => {
       setDiary(matchDiary);
     } else {
       alert("일기가 존재하지 않아요ㅠㅜ");
-      navigate("/", { replace: true });
+      navigate("/home", { replace: true });
     }
   }, [id, data]);
 

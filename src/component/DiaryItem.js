@@ -5,6 +5,7 @@ import { getEmotionImgById } from '../util';
 import Button from './Button';
 
 const DiaryItem = ({ id, emotionId, content, date }) => {
+  // 이미지 섹션 만들기
   const navigate = useNavigate();
   const goDetail = () => {
     navigate(`/diary/${id}`);

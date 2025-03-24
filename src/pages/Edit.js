@@ -25,19 +25,19 @@ const Edit = () => {
 
   // 삭제하기, 작성완료 버튼 구현하기
   const { onUpdate, onDelete } = useContext(DiaryDispatchContext);
-  // 작성완료
+    // 작성완료
   const onSubmit = (data) => {
     if(window.confirm("일기 수정을 끝마쳤나요?")) {
       const { date, content, emotionId } = data;
       onUpdate(id, date, content, emotionId);
-      navigate("/", { replace : true });
+      navigate("/home", { replace : true });
     }
   };
-  // 삭제하기
+    // 삭제하기
   const onClickDelete = () => {
     if(window.confirm("일기를 정말 삭제할까요? 다시 복구할 수 없어요!ㅜㅜ")) {
       onDelete(id);
-      navigate("/", { replace : true });
+      navigate("/home", { replace : true });
     }
   };
 

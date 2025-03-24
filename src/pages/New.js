@@ -22,7 +22,7 @@ const New = () => {
   const onSubmit = (data) => {
     const { date, content, emotionId } = data;
     onCreate(date, content, emotionId);
-    navigate("/", { replace : true });
+    navigate("/home", { replace : true });
   }
 
   return (

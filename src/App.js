@@ -5,10 +5,14 @@ import New from './pages/New';
 import Diary from './pages/Diary';
 import Edit from './pages/Edit';
 import React, { useEffect, useReducer, useRef, useState } from 'react';
+import Main from './pages/Main';
 
+// state값을 공급하기 위한 Context 객체
 export const DiaryStateContext = React.createContext();
+// state를 업데이트 하는 함수를 공급하기 위한 Context 객체체
 export const DiaryDispatchContext = React.createContext();
 
+// 일기 데이터 관리
 function reducer(state, action) {
   switch (action.type) {
     case "INIT" : {
@@ -40,8 +44,11 @@ function reducer(state, action) {
 }
 
 function App() {
+  // 데이터 로딩 상태 구현하기
   const [isDataLoaded, setIsDataLoaded] = useState(false);
+  // 일기 데이터 관리 state
   const [data, dispatch] = useReducer(reducer, []);
+  // 일기 추가 시 key로 사용할 참조 객체 만들기
   const idRef = useRef(0);
   
   useEffect(()=>{
@@ -60,7 +67,7 @@ function App() {
     dispatch({ type: "INIT", data: localData });
     setIsDataLoaded(true);
   },[]);
-
+  // 일기 state 업데이트(작성, 수정, 삭제) 기능 구현하기
   const onCreate = (date, content, emotionId) => {
     dispatch({
       type : "CREATE",
@@ -92,7 +99,7 @@ function App() {
   };
 
   if(!isDataLoaded) {
-    return <div>데이터를 불러오는 중입니다..</div>
+    return <div><Main /></div>
   } else {
     return (
       <DiaryStateContext.Provider value={data}>
@@ -105,7 +112,8 @@ function App() {
         >
           <div className="App">
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/' element={<Main />} />
+              <Route path='/home' element={<Home />} />
               <Route path='/new' element={<New />} />
               <Route path='/diary/:id' element={<Diary />} />
               <Route path='/edit/:id' element={<Edit />} />

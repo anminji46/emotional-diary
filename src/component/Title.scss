@@ -1,0 +1,41 @@
+.Title {
+  h1 {
+    margin: 0;
+    text-align: left;
+    font-size: 70px;
+    line-height: 1.5;
+    span:nth-of-type(1),
+    span:nth-of-type(2),
+    span:nth-of-type(3),
+    span:nth-of-type(4) {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #FDFDFD;
+      border: 2px solid #FDFDFD;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 40px;
+      line-height: 50px;
+      color: #F2D7D9;
+    }
+    span:nth-of-type(5),
+    span:nth-of-type(6),
+    span:nth-of-type(7),
+    span:nth-of-type(8),
+    span:nth-of-type(9) {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-left:2px solid #AAAAAA;
+      border-top: 6px double #AAAAAA;
+      border-bottom: 6px double #AAAAAA;
+      text-align: center;
+      line-height: 80px;
+      &:nth-of-type(9) {
+        border-right: 2px solid #AAAAAA;
+      }
+    }
+  }
+}

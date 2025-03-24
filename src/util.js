@@ -9,6 +9,7 @@ import emotion8 from './img/emotion8.png';
 import emotion9 from './img/emotion9.png';
 import emotion10 from './img/emotion10.png';
 
+// 이미지를 불러오는 함수
 export const getEmotionImgById = (emotionId) => {
   const targetEmotionId = String(emotionId);
   switch (targetEmotionId) {
@@ -37,6 +38,7 @@ export const getEmotionImgById = (emotionId) => {
   }
 }
 
+// 날짜 입력 폼의 기본값을 오늘 날짜로 자동 설정
 export const getFormattedDate = (targetDate) => {
   let year = targetDate.getFullYear();
   let month = targetDate.getMonth()+1;
@@ -47,6 +49,7 @@ export const getFormattedDate = (targetDate) => {
   return `${year}-${month}-${date}`
 }
 
+// 감정 이미지 렌더링
 export const emotionList = [
   {
     id : 1,
@@ -100,6 +103,7 @@ export const emotionList = [
   },
 ]
 
+// pivotDate에 저장된 날짜에서 해당 월을 시작-끝 타임스탬프 구하기
 export const getMonthRangeByDate = (date) => {
   const beginTimeStamp = new Date(date.getFullYear(), date.getMonth(), 1).getTime();
   const endTimeStamp = new Date(

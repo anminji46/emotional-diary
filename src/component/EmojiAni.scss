@@ -1,0 +1,45 @@
+.EmojiAni {
+  .emoji-box {
+    position: relative;
+    [class^=emoji] {
+      position: absolute;
+      top: -100px; left: 0;
+      transform: translateX(-50%);
+      width: 150px;
+      border: 1px solid white;
+      background: white;
+      border-radius: 45%;
+      text-align: center;
+      color: #333;
+      font-size: 25px;
+      opacity: 0;
+    }
+    .emoji1 {
+      animation: ani 1.3s 0s steps(10, jump-none) alternate;
+    }
+    .emoji2 {
+      animation: ani 1.3s 1.3s steps(10, jump-none) alternate;
+    }
+    .emoji3 {
+      animation: ani 1.3s 2.6s steps(10, jump-none) alternate;
+    }
+    .emoji4 {
+      animation: ani 1.3s 3.9s steps(10, jump-none) alternate;
+    }
+    .emoji5 {
+      animation: ani 1.3s 5.2s steps(10, jump-none) alternate;
+    }
+  }
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
